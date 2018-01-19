@@ -1,5 +1,9 @@
 #!/bin/bash
-source functions.sh
+
+yyq_echo() {
+  local fmt="$1"; shift
+  printf "\n$fmt\n" "$@"
+}
 
 #install Homebrew and create SSH key pairs
 
