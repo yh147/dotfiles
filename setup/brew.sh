@@ -18,3 +18,11 @@ yyq_echo "Copying SSH key to your clipboard."
 pbcopy < ~/.ssh/id_rsa.pub
 
 yyq_echo "Add key to github to finish setup."
+
+yyq_echo "Please enter user.name."
+read user_name
+git config --global user.name $user_name
+
+yyq_echo "Please enter user.email."
+read user_email
+git config --global user.email $user_email
