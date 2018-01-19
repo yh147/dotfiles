@@ -6,3 +6,8 @@ Install ShadowsocksX-NG
 ```bash
 git clone https://github.com/yh1306/dotfiles.git && cd dotfiles/setup && chmod a+x ssr.sh && ./ssr.sh
 ```
+## Homebrew
+Install homebrew and SSH key pairs
+```bash
+bash brew.sh
+```
