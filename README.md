@@ -1,2 +1,2 @@
 # dotfiles
-Mac Dev Setup scripts
+macOS and Debian Dev Setup scripts
