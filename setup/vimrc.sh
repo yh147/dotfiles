@@ -7,6 +7,8 @@ if [ ! -d "$vundlePath" ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git "$vundlePath"
 fi
 
-cp $HOME/.vimrc $HOME/.vimrc.bak
+if [ -f "$HOME/.vimrc" ]; then
+	cp $HOME/.vimrc $HOME/.vimrc.bak
+fi
 cat ../vim/vimrc > $HOME/.vimrc
 vim +PluginInstall +qall
