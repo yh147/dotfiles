@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source functions.sh
 # install Vundle
 
 vundlePath="$HOME/.vim/bundle/Vundle.vim"
