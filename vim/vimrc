@@ -62,3 +62,4 @@ let g:gitgutter_enabled = 1
 let g:gruvbox_bold = 0
 
 colorscheme gruvbox
+set bg=dark
