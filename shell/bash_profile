@@ -14,3 +14,26 @@ export PS1='\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ '
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='CxfxcxdxbxegedabagGxGx'
+
+# alias
+alias ll='ls -l'
+alias la='ls -a'
+alias rm='rm -i'
+alias df='df -h'
+alias kill9='kill -9'
+alias grep='grep -i --color'
+alias psg='ps -ef | grep'
+alias hg='history | grep'
+
+bak() {
+	cp "$@" "$@.bak"-`date +%Y%m%d`
+	echo "`date +%Y-%m-%d` backed up $PWD/$@"
+}
+
+psid() {
+	[[ ! -n ${1} ]] && return
+	pro="[${1:0:1}]${1:1}"
+	ps axo pid,user,command | grep -v grep |grep -i --color ${pro}
+	pids="$(ps axo pid,user,command | grep -v grep | grep -i ${pro} | awk '{print $1}')"
+	complete -W "${pids}" kill9
+}
