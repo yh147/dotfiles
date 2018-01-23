@@ -11,9 +11,9 @@ git clone https://github.com/yh1306/dotfiles.git && cd dotfiles/setup && chmod a
 
 ## Applications
 Install Applications
-- **chrome**
+- **Chrome**
 - **IINA**
-- **shadowsocksx-ng**
+- **Shadowsocksx-ng**
 - **iTerm2**
 ```bash
 bash utilities.sh
