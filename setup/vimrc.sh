@@ -10,5 +10,5 @@ fi
 if [ -f "$HOME/.vimrc" ]; then
 	cp $HOME/.vimrc $HOME/.vimrc.bak
 fi
-cat ../vim/vimrc > $HOME/.vimrc
+cp ../vim/vimrc $HOME/.vimrc
 vim +PluginInstall +qall

@@ -23,3 +23,8 @@ bash utilities.sh
 ```bash
 bash vimrc.sh
 ```
+
+## bash_profile
+```bash
+bash bash_profile.sh && source ~/.bash_profile
+```
