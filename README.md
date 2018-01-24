@@ -28,3 +28,7 @@ bash vimrc.sh
 ```bash
 bash bash_profile.sh && source ~/.bash_profile
 ```
+## web development
+```bash
+bash web.sh
+```
