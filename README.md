@@ -36,3 +36,8 @@ bash bash_profile.sh && source ~/.bash_profile
 ```bash
 bash web.sh
 ```
+
+## java development
+```bash
+bash java.sh
+```
