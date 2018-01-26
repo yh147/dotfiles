@@ -1,7 +1,4 @@
-# dotfiles
-macOS and Debian Dev Setup scripts
-
-## new mac
+# new mac
 If you are a new mac or a newly installed system, and want to install all the application and development environment and vim configuration
 ```bash
 git clone https://github.com/yh1306/dotfiles.git && cd dotfiles/setup && chmod a+x install.sh && ./install.sh
