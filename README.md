@@ -18,6 +18,7 @@ Install Applications
 - **IINA**
 - **Shadowsocksx-ng**
 - **iTerm2**
+- **docker**
 ```bash
 bash utilities.sh
 ```
