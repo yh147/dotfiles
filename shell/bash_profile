@@ -24,6 +24,12 @@ alias kill9='kill -9'
 alias grep='grep -i --color'
 alias psg='ps -ef | grep'
 alias hg='history | grep'
+alias gs='git status'
+alias gp='git push'
+alias gl='git pull'
+alias ga='git add'
+alias gpm='git push origin master'
+alias gcm='git commit -m'
 
 bak() {
 	cp "$@" "$@.bak"-`date +%Y%m%d`
