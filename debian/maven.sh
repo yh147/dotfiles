@@ -26,7 +26,8 @@ function config_maven() {
 }
 
 function uninstall_maven() {
-	echo "uninstall"
+	sed -i '/M2_HOME/d' ~/.bash_profile
+	rm -rf /home/apache-maven-3.5.2
 }
 
 case $1 in
