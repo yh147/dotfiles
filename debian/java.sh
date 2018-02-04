@@ -2,23 +2,29 @@
 
 jdk_src_dir="$HOME/Desktop/src"
 
-function get_jdk() {
+function install_jdk() {
 	if [ ! -d $jdk_src_dir ]; then
 		mkdir $jdk_src_dir
 	fi
-	wget https://yangyaqi.cn/mirrors/java/jdk-8u162-linux-x64.tar.gz
+
+	cd $jdk_src_dir
+
+	if [ $first == "install8" ]; then
+		wget https://yangyaqi.cn/mirrors/java/jdk-8u162-linux-x64.tar.gz
+		tar -zxvf jdk-8u162-linux-x64.tar.gz
+		rm jdk-8u162-linux-x64.tar.gz
+	fi
 }
 
-case "$1" in
-	install7)
-		echo "######################################"
-		echo "          start install jdk7          "
-		echo "######################################"
-		get_jdk
-		;;
+first=$1
+case $first in
 	install8)
+		echo "######################################"
+		echo "          start install jdk8          "
+		echo "######################################"
+		install_jdk
 		;;
 	*)
-		echo "Please use install or unstall as first argument"
+		echo "argument error"
 		;;
 esac
