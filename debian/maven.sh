@@ -16,6 +16,7 @@ function install_maven() {
 	cd $maven_src_dir
 	wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
 	tar -zxvf apache-maven-3.5.2-bin.tar.gz -C /home/
+	rm -rf  apache-maven-3.5.2-bin.tar.gz
 	echo export M2_HOME=/home/apache-maven-3.5.2 >> ~/.bash_profile
 	echo export PATH='$M2_HOME'/bin:'$PATH' >> ~/.bash_profile
 }
