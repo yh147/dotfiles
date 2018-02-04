@@ -1,6 +1,6 @@
 #!/bin/bash
 
-jdk_src_dir="$HOME/Desktop/src"
+jdk_src_dir="/home/src"
 
 function install_jdk() {
 	if [ ! -d $jdk_src_dir ]; then
