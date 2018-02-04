@@ -17,7 +17,7 @@ function install_jdk() {
 	fi
 }
 
-function unintall_jdk() {
+function uninstall_jdk() {
 	if [ $first == "uninstall8" ]; then
 		sed -i '/JAVA_HOME/d' ~/.bash_profile
 		rm -rf /home/jdk1.8.0_162
