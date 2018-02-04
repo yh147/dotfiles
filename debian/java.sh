@@ -37,6 +37,7 @@ case $first in
 		echo "######################################"
 		echo "           uninstall jdk8             "
 		echo "######################################"
+		uninstall_jdk
 		;;
 	*)
 		echo "argument error"
