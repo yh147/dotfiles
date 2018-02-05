@@ -57,6 +57,7 @@ case $1 in
 		echo "######################################"
 		echo "        start install maven          "
 		echo "######################################"
+		check_jdk
 		install_maven
 		config_maven
 		;;
