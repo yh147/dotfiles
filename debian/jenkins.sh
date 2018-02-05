@@ -26,9 +26,9 @@ function stop_jenkins() {
 }
 
 function uninstall_jenkins() {
-	stop_jenkins
 	rm -rf /home/jenkins
 	rm -rf /root/.jenkins
+	stop_jenkins
 }
 
 case $1 in
