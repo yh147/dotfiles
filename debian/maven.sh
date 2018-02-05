@@ -23,7 +23,21 @@ function install_maven() {
 
 function config_maven() {
 	sed -i "55G" /home/apache-maven-3.5.2/conf/settings.xml
-	sed -i "56s/^/ <localRepository>\/home\/apache-maven-3.5.2\/local\/repo<\/localRepository>/" /home/apache-maven-3.5.2/conf/setting.xml
+	sed -i "56s/^/ <localRepository>\/home\/apache-maven-3.5.2\/local\/repo<\/localRepository>/" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "56G" /home/apache-maven-3.5.2/conf/settings.xml
+
+	sed -i "160G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "161s/^/    <mirror>/" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "161G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "162s/^/      <id>alimaven<\/id>/" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "162G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "163s/^/      <name>aliyun maven<\/name>/" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "163G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "164s/^/      <url>http:\/\/maven.aliyun.com\/nexus\/content\/groups\/public\/<\/url>/" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "164G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "165s/^/      <mirrorOf>central<\/mirrorOf>/" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "165G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "166s/^/    <\/mirror>/" /home/apache-maven-3.5.2/conf/settings.xml
 }
 
 function uninstall_maven() {
