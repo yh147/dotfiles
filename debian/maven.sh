@@ -22,10 +22,17 @@ function install_maven() {
 }
 
 function config_maven() {
+	config_maven_local_repo
+	config_maven_mirror
+}
+
+function config_maven_local_repo() {
 	sed -i "55G" /home/apache-maven-3.5.2/conf/settings.xml
 	sed -i "56s/^/ <localRepository>\/home\/apache-maven-3.5.2\/local\/repo<\/localRepository>/" /home/apache-maven-3.5.2/conf/settings.xml
 	sed -i "56G" /home/apache-maven-3.5.2/conf/settings.xml
+}
 
+function config_maven_mirror() {
 	sed -i "160G" /home/apache-maven-3.5.2/conf/settings.xml
 	sed -i "161s/^/    <mirror>/" /home/apache-maven-3.5.2/conf/settings.xml
 	sed -i "161G" /home/apache-maven-3.5.2/conf/settings.xml
