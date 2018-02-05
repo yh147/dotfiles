@@ -22,7 +22,8 @@ function install_maven() {
 }
 
 function config_maven() {
-	echo "config"
+	sed -i "55G" /home/apache-maven-3.5.2/conf/settings.xml
+	sed -i "56s/^/ <localRepository>\/home\/apache-maven-3.5.2\/local\/repo<\/localRepository>/" /home/apache-maven-3.5.2/conf/setting.xml
 }
 
 function uninstall_maven() {
@@ -36,6 +37,7 @@ case $1 in
 		echo "        start install maven          "
 		echo "######################################"
 		install_maven
+		config_maven
 		;;
 	uninstall)
 		echo "######################################"
