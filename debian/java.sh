@@ -1,14 +1,6 @@
 #!/bin/bash
 
-jdk_src_dir="/home/src"
-
 function install_jdk() {
-	if [ ! -d $jdk_src_dir ]; then
-		mkdir $jdk_src_dir
-	fi
-
-	cd $jdk_src_dir
-
 	if [ $first == "install8" ]; then
 		wget https://yangyaqi.cn/mirrors/java/jdk-8u162-linux-x64.tar.gz
 		tar -zxvf jdk-8u162-linux-x64.tar.gz -C /home/

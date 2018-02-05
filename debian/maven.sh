@@ -1,7 +1,5 @@
 #!/bin/bash
 
-maven_src_dir="/home/src"
-
 function check_jdk() {
 	if [ -z $JAVA_HOME ]; then
 		bash java.sh install8
@@ -9,11 +7,6 @@ function check_jdk() {
 }
 
 function install_maven() {
-	if [ ! -d $maven_src_dir ]; then
-		mkdir $maven_src_dir
-	fi
-
-	cd $maven_src_dir
 	wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
 	tar -zxvf apache-maven-3.5.2-bin.tar.gz -C /home/
 	rm -rf  apache-maven-3.5.2-bin.tar.gz
