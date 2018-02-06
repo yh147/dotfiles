@@ -13,9 +13,10 @@ function install_nexus() {
 		mkdir $nexus_src_dir
 	fi
 
-	cd $nexus_src_die
+	cd $nexus_src_dir
 	wget https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.7.1-02-unix.tar.gz
 	tar -zxvf nexus-3.7.1-02-unix.tar.gz
+	rm -rf nexus-3.7.1-02-unix.tar.gz
 }
 
 function start_nexus() {
