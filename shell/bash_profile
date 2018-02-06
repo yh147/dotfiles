@@ -48,3 +48,14 @@ psid() {
 	pids="$(ps axo pid,user,command | grep -v grep | grep -i ${pro} | awk '{print $1}')"
 	complete -W "${pids}" kill9
 }
+
+cdls() {
+	if [ -n $1 ] ; then
+		cd $1
+		ls
+	else
+		cd
+		ls
+	fi
+}
+alias cd=cdls
