@@ -2,6 +2,7 @@
 
 function install_CI() {
 	bash java.sh install8
+	source ~/.bash_profile
 	bash maven.sh install
 	bash jenkins.sh install
 	bash nexus.sh install
