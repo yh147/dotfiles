@@ -14,7 +14,7 @@ function install_nexus() {
 	fi
 
 	cd $nexus_src_dir
-	wget https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.7.1-02-unix.tar.gz
+	wget https://yangyaqi.cn/mirrors/java/nexus-3.7.1-02-unix.tar.gz
 	tar -zxvf nexus-3.7.1-02-unix.tar.gz
 	rm -rf nexus-3.7.1-02-unix.tar.gz
 }
