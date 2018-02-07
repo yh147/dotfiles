@@ -47,17 +47,13 @@ function uninstall_maven() {
 
 case $1 in
 	install)
-		echo "######################################"
-		echo "         start install maven          "
-		echo "######################################"
+		echo "start install maven"
 		check_jdk
 		install_maven
 		config_maven
 		;;
 	uninstall)
-		echo "######################################"
-		echo "          uninstall maven             "
-		echo "######################################"
+		echo "uninstall maven"
 		uninstall_maven
 		;;
 	*)

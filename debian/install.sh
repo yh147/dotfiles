@@ -19,15 +19,11 @@ function uninstall_CI() {
 
 case $1 in
 	CI)
-		echo "######################################"
-		echo "          start install CI            "
-		echo "######################################"
+		echo "start install CI"
 		install_CI
 		;;
 	uninstallCI)
-		echo "######################################"
-		echo "          start uninstall CI          "
-		echo "######################################"
+		echo "start uninstall CI"
 		uninstall_CI
 		;;
 	*)

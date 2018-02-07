@@ -21,15 +21,11 @@ function uninstall_jdk() {
 first=$1
 case $first in
 	install8)
-		echo "######################################"
-		echo "          start install jdk8          "
-		echo "######################################"
+		echo "start install jdk8"
 		install_jdk
 		;;
 	uninstall8)
-		echo "######################################"
-		echo "           uninstall jdk8             "
-		echo "######################################"
+		echo "uninstall jdk8"
 		uninstall_jdk
 		;;
 	*)

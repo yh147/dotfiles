@@ -49,39 +49,27 @@ function uninstall_nginx() {
 
 case $1 in
 	install)
-		echo "######################################"
-		echo "         start install nginx          "
-		echo "######################################"
+		echo "start install nginx"
 		install_nginx
 		;;
 	uninstall)
-		echo "######################################"
-		echo "           uninstall nginx            "
-		echo "######################################"
+		echo "uninstall nginx"
 		uninstall_nginx
 		;;
 	start)
-		echo "######################################"
-		echo "              start nginx             "
-		echo "######################################"
+		echo "start nginx"
 		start_nginx
 		;;
 	stop)
-		echo "######################################"
-		echo "              stop nginx              "
-		echo "######################################"
+		echo "stop nginx"
 		stop_nginx
 		;;
 	reload)
-		echo "######################################"
-		echo "            reload nginx              "
-		echo "######################################"
+		echo "reload nginx"
 		reload_nginx
 		;;
 	check)
-		echo "######################################"
-		echo "         check nginx conf             "
-		echo "######################################"
+		echo "check nginx conf"
 		check_nginx_conf
 		;;
 	*)

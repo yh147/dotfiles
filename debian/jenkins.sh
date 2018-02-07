@@ -33,28 +33,20 @@ function uninstall_jenkins() {
 
 case $1 in
 	install)
-		echo "######################################"
-		echo "        start install jenkins         "
-		echo "######################################"
+		echo "start install jenkins"
 		check_jdk
 		install_jenkins
 		;;
 	uninstall)
-		echo "######################################"
-		echo "          uninstall jenkins           "
-		echo "######################################"
+		echo "uninstall jenkins"
 		uninstall_jenkins
 		;;
 	start)
-		echo "######################################"
-		echo "            start jenkins             "
-		echo "######################################"
+		echo "start jenkins"
 		start_jenkins
 		;;
 	stop)
-		echo "######################################"
-		echo "            stop jenkins              "
-		echo "######################################"
+		echo "stop jenkins"
 		stop_jenkins
 		;;
 	*)
