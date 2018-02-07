@@ -35,26 +35,26 @@ function uninstall_nexus() {
 case $1 in
 	install)
 		echo "######################################"
-		echo "        start install nexus         "
+		echo "          start install nexus         "
 		echo "######################################"
 		check_jdk
 		install_nexus
 		;;
 	uninstall)
 		echo "######################################"
-		echo "          uninstall nexus           "
+		echo "           uninstall nexus            "
 		echo "######################################"
 		uninstall_nexus
 		;;
 	start)
 		echo "######################################"
-		echo "          start nexus           "
+		echo "             start nexus              "
 		echo "######################################"
 		start_nexus
 		;;
 	stop)
 		echo "######################################"
-		echo "            stop nexus              "
+		echo "              stop nexus              "
 		echo "######################################"
 		stop_nexus
 		;;

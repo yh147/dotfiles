@@ -47,7 +47,7 @@ case $1 in
 		;;
 	start)
 		echo "######################################"
-		echo "          start jenkins           "
+		echo "            start jenkins             "
 		echo "######################################"
 		start_jenkins
 		;;
