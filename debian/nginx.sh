@@ -3,7 +3,14 @@
 function install_nginx() {
 	add_user
 	get_src
+	check_dependence
 	config_nginx
+}
+
+function check_dependence() {
+	apt install libpcre3 libpcre3-dev
+	apt install openssl libssl-dev
+	apt install zlib1g-dev
 }
 
 function add_user() {
