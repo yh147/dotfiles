@@ -51,6 +51,6 @@ case $1 in
 		stop_nexus
 		;;
 	*)
-		echo "argument error"
+		echo $"Usage: $0 {start|stop|install|uninstall}"
 		;;
 esac

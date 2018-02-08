@@ -27,6 +27,6 @@ case $1 in
 		uninstall_CI
 		;;
 	*)
-		echo "argument error"
+		echo $"Usage: $0 {CI|uninstallCI}"
 		;;
 esac

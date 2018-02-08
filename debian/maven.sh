@@ -57,6 +57,6 @@ case $1 in
 		uninstall_maven
 		;;
 	*)
-		echo "argument error"
+		echo $"Usage: $0 {install|uninstall}"
 		;;
 esac

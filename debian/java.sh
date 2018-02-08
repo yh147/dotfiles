@@ -29,6 +29,6 @@ case $first in
 		uninstall_jdk
 		;;
 	*)
-		echo "argument error"
+		echo $"Usage: $0 {install8|uninstall8}"
 		;;
 esac

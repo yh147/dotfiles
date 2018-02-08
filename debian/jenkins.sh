@@ -50,6 +50,6 @@ case $1 in
 		stop_jenkins
 		;;
 	*)
-		echo "argument error"
+		echo $"Usage: $0 {start|stop|install|uninstall}"
 		;;
 esac

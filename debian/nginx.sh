@@ -86,6 +86,6 @@ case $1 in
 		check_nginx_conf
 		;;
 	*)
-		echo "argument error"
+		echo $"Usage: $0 {start|stop|reload|check|install|uninstall}"
 		;;
 esac
