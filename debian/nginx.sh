@@ -5,12 +5,13 @@ function install_nginx() {
 	get_src
 	check_dependence
 	config_nginx
+	clear_src
 }
 
 function check_dependence() {
-	apt install libpcre3 libpcre3-dev
-	apt install openssl libssl-dev
-	apt install zlib1g-dev
+	apt-get install libpcre3 libpcre3-dev
+	apt-get install openssl libssl-dev
+	apt-get install zlib1g-dev
 }
 
 function add_user() {
@@ -31,6 +32,11 @@ function config_nginx() {
 	--with-http_ssl_module \
 	--with-pcre && \
 	make && make install
+}
+
+function clear_src() {
+	rm -rf /home/nginx-1.12.2.tar.gz
+	rm -rf /home/nginx-1.12.2
 }
 
 function start_nginx() {
