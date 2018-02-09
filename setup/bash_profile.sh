@@ -1,6 +1,4 @@
 #!/bin/bash
-source functions.sh
-
 #  ~/.bash_profile
 
 if [ -f "$HOME/.bash_profile" ]; then

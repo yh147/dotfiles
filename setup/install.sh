@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #new mac development install scripts
 
 source brew.sh
