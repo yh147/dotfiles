@@ -9,9 +9,11 @@ function install_nginx() {
 }
 
 function check_dependence() {
-	apt-get install libpcre3 libpcre3-dev
-	apt-get install openssl libssl-dev
-	apt-get install zlib1g-dev
+	apt-get install -y gcc
+	apt-get install -y make
+	apt-get install -y libpcre3 libpcre3-dev
+	apt-get install -y openssl libssl-dev
+	apt-get install -y zlib1g-dev
 }
 
 function add_user() {
