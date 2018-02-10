@@ -49,7 +49,7 @@ function config_php() {
 	--with-fpm-user=php \
 	--with-fpm-group=php &&\
 	make && make install
-	cp php.ini-production /$php_install_dir/lib/
+	cp php.ini-production $php_install_dir/lib/
 	cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm
 	cp $php_install_dir/etc/php-fpm.conf.default $php_install_dir/etc/php-fpm.conf
 	cp $php_install_dir/etc/php/etc/php-fpm.d/www.conf.default $php_install_dir/etc/php-fpm.d/www.conf
