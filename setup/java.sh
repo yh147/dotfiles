@@ -1,5 +1,4 @@
 #/bin/bash
-
 # java development
 
 brew cask install java

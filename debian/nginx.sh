@@ -18,7 +18,7 @@ function check_dependence() {
 
 function add_user() {
 	groupadd -r nginx
-	useradd -r -g nginx nginx
+	useradd -r -g nginx -s /bin/false -M nginx
 }
 
 function get_src() {
