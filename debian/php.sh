@@ -52,7 +52,7 @@ function config_php() {
 	cp php.ini-production $php_install_dir/lib/
 	cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm
 	cp $php_install_dir/etc/php-fpm.conf.default $php_install_dir/etc/php-fpm.conf
-	cp $php_install_dir/etc/php/etc/php-fpm.d/www.conf.default $php_install_dir/etc/php-fpm.d/www.conf
+	cp $php_install_dir/etc/php-fpm.d/www.conf.default $php_install_dir/etc/php-fpm.d/www.conf
 	chmod +x /etc/init.d/php-fpm
 }
 
