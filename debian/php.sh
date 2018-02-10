@@ -39,8 +39,8 @@ function config_php() {
 	--with-zlib \
 	--with-freetype-dir \
 	--enable-gd-native-ttf \
-	--enable-mysql \
-	--with-pdo-mysql=mysql \
+	--enable-mysqlnd \
+	--with-pdo-mysql=mysqlnd \
 	--with-openssl \
 	--with-mcrypt \
 	--enable-mbstring \
