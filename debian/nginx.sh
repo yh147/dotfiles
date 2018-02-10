@@ -62,6 +62,10 @@ function uninstall_nginx() {
 	rm -rf /home/nginx
 }
 
+function config_info() {
+	/home/nginx/sbin/nginx -V
+}
+
 case $1 in
 	install)
 		echo "start install nginx"
@@ -87,7 +91,11 @@ case $1 in
 		echo "check nginx conf"
 		check_nginx_conf
 		;;
+	info)
+		echo "nginx configure info"
+		config_info
+		;;
 	*)
-		echo $"Usage: $0 {start|stop|reload|check|install|uninstall}"
+		echo $"Usage: $0 {start|stop|reload|check|install|uninstall|info}"
 		;;
 esac
