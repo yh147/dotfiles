@@ -65,6 +65,16 @@ function start_php() {
 	/etc/init.d/php-fpm start
 }
 
+function stop_php() {
+	/etc/init.d/php-fpm stop
+}
+
+function uninstall_php() {
+	stop_php
+	rm -rf /etc/init.d/php-fpm
+	rm -rf /home/php7
+}
+
 case $1 in
 	install)
 		echo "start install php"
