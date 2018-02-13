@@ -35,6 +35,7 @@ alias bashpr='vim ~/.bash_profile && source ~/.bash_profile'
 alias vimrc='vim ~/.vimrc && source ~/.vimrc'
 alias loadpr='source ~/.bash_profile'
 alias loadvimrc='source ~/.vimrc'
+alias sshvultr='ssh root@45.76.102.85'
 
 bak() {
 	cp "$@" "$@.bak"-`date +%Y%m%d`
