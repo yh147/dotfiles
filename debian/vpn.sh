@@ -13,7 +13,7 @@ function check_dependence() {
 
 function get_src() {
 	cd /home
-	wget https://yangyaqi.cn/mirrors/vpn-v4.25-9656.tar.gz
+	wget https://mirrors.yangyaqi.cn/vpn-v4.25-9656.tar.gz
 	tar -zxvf vpn-v4.25-9656.tar.gz
 }
 

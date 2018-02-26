@@ -2,7 +2,7 @@
 
 function install_jdk() {
 	if [ $first == "install8" ]; then
-		wget https://yangyaqi.cn/mirrors/java/jdk-8u162-linux-x64.tar.gz
+		wget https://mirrors.yangyaqi.cn/java/jdk-8u162-linux-x64.tar.gz
 		tar -zxvf jdk-8u162-linux-x64.tar.gz -C /home/
 		rm -rf jdk-8u162-linux-x64.tar.gz
 		echo export JAVA_HOME=/home/jdk1.8.0_162 >> ~/.bash_profile

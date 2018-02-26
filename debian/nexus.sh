@@ -14,7 +14,7 @@ function install_nexus() {
 	fi
 
 	cd $nexus_src_dir
-	wget https://yangyaqi.cn/mirrors/java/nexus-3.7.1-02-unix.tar.gz
+	wget https://mirrors.yangyaqi.cn/java/nexus-3.7.1-02-unix.tar.gz
 	tar -zxvf nexus-3.7.1-02-unix.tar.gz
 	rm -rf nexus-3.7.1-02-unix.tar.gz
 }
