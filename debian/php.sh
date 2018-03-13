@@ -37,6 +37,7 @@ function config_php() {
 	./configure  --prefix=$php_install_dir \
 	--with-gd \
 	--with-zlib \
+	--with-curl=/usr/local/curl \
 	--with-freetype-dir \
 	--enable-gd-native-ttf \
 	--enable-mysqlnd \
