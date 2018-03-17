@@ -12,6 +12,7 @@ function check_dependence() {
 	version=`cat /proc/version`
 	if [[ $version =~ "centos" ]]; then
 		yum install -y gcc
+		yum install -y wget
 		yum install -y pcre pcre-devel
 		yum install -y openssl openssl-devel
 	elif [[ $version =~ "debian" ]]; then
@@ -53,7 +54,7 @@ function start_nginx() {
 }
 
 function stop_nginx() {
-	systemclt stop nginx
+	systemctl stop nginx
 }
 
 function uninstall_nginx() {
