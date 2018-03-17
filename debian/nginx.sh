@@ -9,11 +9,18 @@ function install_nginx() {
 }
 
 function check_dependence() {
-	apt-get install -y gcc
-	apt-get install -y make
-	apt-get install -y libpcre3 libpcre3-dev
-	apt-get install -y openssl libssl-dev
-	apt-get install -y zlib1g-dev
+	version=`cat /proc/version`
+	if [[ $version =~ "centos" ]]; then
+		yum install -y gcc
+		yum install -y pcre pcre-devel
+		yum install -y openssl openssl-devel
+	elif [[ $version =~ "debian" ]]; then
+		apt-get install -y gcc
+		apt-get install -y make
+		apt-get install -y libpcre3 libpcre3-dev
+		apt-get install -y openssl libssl-dev
+		apt-get install -y zlib1g-dev
+	fi
 }
 
 function add_user() {
