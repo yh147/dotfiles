@@ -49,34 +49,32 @@ function clear_src() {
 }
 
 function start_nginx() {
-	/home/nginx/sbin/nginx
+	systemctl start nginx
 }
 
 function stop_nginx() {
-	/home/nginx/sbin/nginx -s stop
-}
-
-function reload_nginx() {
-	/home/nginx/sbin/nginx -s reload
-}
-
-function check_nginx_conf() {
-	/home/nginx/sbin/nginx -t
+	systemclt stop nginx
 }
 
 function uninstall_nginx() {
 	stop_nginx
+	systemctl disable nginx
+	rm -rf /etc/systemd/system/nginx.service
 	rm -rf /home/nginx
 }
 
-function config_info() {
-	/home/nginx/sbin/nginx -V
+function init_nginx() {
+	wget -P /etc/systemd/system/ "https://raw.githubusercontent.com/yh1306/dotfiles/master/service/nginx.service"
+	systemctl start nginx
+	systemctl enable nginx
+	systemctl status nginx
 }
 
 case $1 in
 	install)
 		echo "start install nginx"
 		install_nginx
+		init_nginx
 		;;
 	uninstall)
 		echo "uninstall nginx"
@@ -90,19 +88,7 @@ case $1 in
 		echo "stop nginx"
 		stop_nginx
 		;;
-	reload)
-		echo "reload nginx"
-		reload_nginx
-		;;
-	check)
-		echo "check nginx conf"
-		check_nginx_conf
-		;;
-	info)
-		echo "nginx configure info"
-		config_info
-		;;
 	*)
-		echo $"Usage: $0 {start|stop|reload|check|install|uninstall|info}"
+		echo $"Usage: $0 {start|stop|install|uninstall}"
 		;;
 esac
