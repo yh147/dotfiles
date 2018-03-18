@@ -13,6 +13,7 @@ function install_php() {
 function check_dependence() {
 	version=`cat /proc/version`
 	if [[ $version =~ "centos" ]]; then
+		yum install -y gcc
 		yum install -y wget
 		yum install -y libxml2
 		yum install -y libxml2-devel
