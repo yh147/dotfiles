@@ -4,8 +4,8 @@ php_install_dir="/home/php7"
 
 function install_php() {
 	add_user
-	get_src
 	check_dependence
+	get_src
 	config_php
 	clear_src
 }
@@ -15,6 +15,7 @@ function check_dependence() {
 	if [[ $version =~ "centos" ]]; then
 		yum install -y gcc
 		yum install -y wget
+		yum install -y openssl openssl-devel
 		yum install -y libxml2
 		yum install -y libxml2-devel
 		yum install -y curl-devel

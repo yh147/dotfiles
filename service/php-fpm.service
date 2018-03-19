@@ -5,7 +5,7 @@ After=syslog.target network.target
 [Service]
 Type=simple
 PIDFile=/run/php-fpm.pid
-ExecStart=/home/php/sbin/php-fpm --nodaemonize --fpm-config /home/php/etc/php-fpm.conf
+ExecStart=/home/php7/sbin/php-fpm --nodaemonize --fpm-config /home/php7/etc/php-fpm.conf
 ExecReload=/bin/kill -USR2 $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
 
