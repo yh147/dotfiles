@@ -7,7 +7,7 @@ php_fpm_service="https://raw.githubusercontent.com/yh1306/dotfiles/master/servic
 function install_php() {
 	add_user
 	check_dependence
-	donwload_src
+	download_src
 	config_php
 	clear_src
 }
