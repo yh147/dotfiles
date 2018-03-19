@@ -32,6 +32,9 @@ function check_dependence() {
 		apt-get install -y libpng-dev
 		apt-get install -y libfreetype6-dev
 		apt-get install -y libmcrypt-dev
+		apt-get install -y curl
+                apt-get install -y libcurl4-gnutls-dev
+                ln -s /usr/include/x86_64-linux-gnu/curl /usr/include/
 		ln -s /usr/lib/x86_64-linux-gnu/libssl.so  /usr/lib
 	fi
 }
