@@ -1,11 +1,13 @@
 #!/bin/bash
 
 php_install_dir="/home/php7"
+php_url="http://cn2.php.net/distributions/php-7.2.2.tar.gz"
+php_fpm_service="https://raw.githubusercontent.com/yh1306/dotfiles/master/service/php-fpm.service"
 
 function install_php() {
 	add_user
 	check_dependence
-	get_src
+	donwload_src
 	config_php
 	clear_src
 }
@@ -39,9 +41,9 @@ function add_user() {
 	useradd -r -g php -s /bin/false -M php
 }
 
-function get_src() {
+function download_src() {
 	cd /home
-	wget http://cn2.php.net/distributions/php-7.2.2.tar.gz
+	wget $php_url
 }
 
 function config_php() {
@@ -83,11 +85,13 @@ function stop_php() {
 
 function uninstall_php() {
 	stop_php
+	systemctl disable php-fpm
+	rm -rf /etc/systemd/system/php-fpm.service
 	rm -rf /home/php7
 }
 
 function init_php() {
-	wget -P /etc/systemd/system/ "https://raw.githubusercontent.com/yh1306/dotfiles/master/service/php-fpm.service"
+	wget -P /etc/systemd/system/ $php_fpm_service
 	systemctl start php-fpm
 	systemctl enable php-fpm
 	systemctl status php-fpm
