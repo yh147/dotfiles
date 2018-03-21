@@ -1,9 +1,12 @@
 #!/bin/bash
 
+nginx_url="http://nginx.org/download/nginx-1.12.2.tar.gz"
+nginx_service="https://raw.githubusercontent.com/yh1306/dotfiles/master/service/nginx.service"
+
 function install_nginx() {
 	add_user
-	get_src
 	check_dependence
+	download_src
 	config_nginx
 	clear_src
 }
@@ -29,9 +32,9 @@ function add_user() {
 	useradd -r -g nginx -s /bin/false -M nginx
 }
 
-function get_src() {
+function download_src() {
 	cd /home
-	wget http://nginx.org/download/nginx-1.12.2.tar.gz
+	wget $nginx_url
 }
 
 function config_nginx() {
@@ -65,7 +68,7 @@ function uninstall_nginx() {
 }
 
 function init_nginx() {
-	wget -P /etc/systemd/system/ "https://raw.githubusercontent.com/yh1306/dotfiles/master/service/nginx.service"
+	wget -P /etc/systemd/system/ $nginx_service
 	systemctl start nginx
 	systemctl enable nginx
 	systemctl status nginx
