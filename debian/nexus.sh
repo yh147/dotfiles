@@ -1,6 +1,7 @@
 #!/bin/bash
 
 nexus_src_dir="/home/nexus"
+nexus_url="https://mirrors.yangyaqi.cn/java/nexus-3.7.1-02-unix.tar.gz"
 
 function check_jdk() {
 	if [ -z $JAVA_HOME ]; then
@@ -14,7 +15,7 @@ function install_nexus() {
 	fi
 
 	cd $nexus_src_dir
-	wget https://mirrors.yangyaqi.cn/java/nexus-3.7.1-02-unix.tar.gz
+	wget $nexus_url
 	tar -zxvf nexus-3.7.1-02-unix.tar.gz
 	rm -rf nexus-3.7.1-02-unix.tar.gz
 }
