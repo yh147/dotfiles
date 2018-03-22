@@ -1,6 +1,7 @@
 #!/bin/bash
 
 jenkins_src_dir="/home/jenkins"
+jenkins_url="http://mirrors.jenkins.io/war-stable/latest/jenkins.war"
 
 function check_jdk() {
 	if [ -z $JAVA_HOME ]; then
@@ -14,7 +15,7 @@ function install_jenkins() {
 	fi
 
 	cd $jenkins_src_dir
-	wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+	wget $jenkins_url
 }
 
 function start_jenkins() {
