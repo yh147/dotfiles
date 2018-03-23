@@ -60,6 +60,8 @@ function config_php() {
 	--enable-gd-native-ttf \
 	--enable-mysqlnd \
 	--with-pdo-mysql=mysqlnd \
+	--with-mysql \
+	--with-mysqli \
 	--with-openssl \
 	--with-mcrypt \
 	--enable-mbstring \
@@ -74,8 +76,7 @@ function config_php() {
 }
 
 function clear_src() {
-	rm -rf /home/php-7.2.2.tar.gz
-	rm -rf /home/php-7.2.2
+	rm -rf /home/php-*
 }
 
 function start_php() {
@@ -90,7 +91,7 @@ function uninstall_php() {
 	stop_php
 	systemctl disable php-fpm
 	rm -rf /etc/systemd/system/php-fpm.service
-	rm -rf /home/php7
+	rm -rf $php_install_dir
 }
 
 function init_php() {
