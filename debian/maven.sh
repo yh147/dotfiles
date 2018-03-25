@@ -1,5 +1,7 @@
 #!/bin/bash
 
+maven_url="http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz"
+
 function check_jdk() {
 	if [ -z $JAVA_HOME ]; then
 		bash java.sh install8
@@ -7,7 +9,7 @@ function check_jdk() {
 }
 
 function install_maven() {
-	wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+	wget $maven
 	tar -zxvf apache-maven-3.5.2-bin.tar.gz -C /home/
 	rm -rf  apache-maven-3.5.2-bin.tar.gz
 	echo export M2_HOME=/home/apache-maven-3.5.2 >> ~/.bash_profile
