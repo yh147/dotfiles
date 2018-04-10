@@ -9,7 +9,7 @@ function check_jdk() {
 }
 
 function install_maven() {
-	wget $maven
+	wget $maven_url
 	tar -zxvf apache-maven-3.5.2-bin.tar.gz -C /home/
 	rm -rf  apache-maven-3.5.2-bin.tar.gz
 	echo export M2_HOME=/home/apache-maven-3.5.2 >> ~/.bash_profile
