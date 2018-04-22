@@ -1,7 +1,7 @@
 #!/bin/bash
 
 nginx_url="http://nginx.org/download/nginx-1.12.2.tar.gz"
-nginx_service="https://raw.githubusercontent.com/yh1306/dotfiles/master/service/nginx.service"
+nginx_service="https://raw.githubusercontent.com/yh147/dotfiles/master/service/nginx.service"
 
 function install_nginx() {
 	add_user
