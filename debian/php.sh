@@ -2,7 +2,7 @@
 
 php_install_dir="/home/php7"
 php_url="http://cn2.php.net/distributions/php-7.2.2.tar.gz"
-php_fpm_service="https://raw.githubusercontent.com/yh1306/dotfiles/master/service/php-fpm.service"
+php_fpm_service="https://raw.githubusercontent.com/yh147/dotfiles/master/service/php-fpm.service"
 
 function install_php() {
 	add_user
