@@ -1,0 +1,13 @@
+[Unit]
+Description=nexus
+After=network.target
+ 
+[Service]
+Type=forking
+ExecStart=/home/nexus-2.13.0-01/bin/nexus start
+ExecReload=/home/nexus-2.13.0-01/bin/nexus stop
+ExecStop=/home/nexus-2.13.0-01/bin/nexus stop
+PrivateTmp=true
+ 
+[Install]  
+WantedBy=multi-user.target
