@@ -7,6 +7,11 @@ function install() {
 	apt-get install mysql-server
 }
 
+function update() {
+	grant all privileges on *.* to 'root'@'%'identified by 'root' with grant option;
+	FLUSH PRIVILEGES;
+}
+
 first=$1
 case $first in
 	install)
